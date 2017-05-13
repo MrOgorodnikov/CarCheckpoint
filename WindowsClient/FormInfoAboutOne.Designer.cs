@@ -53,6 +53,7 @@
             this.CardId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entrancesDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardsGridView)).BeginInit();
@@ -272,11 +273,21 @@
             this.Count.Name = "Count";
             this.Count.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(268, 631);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(240, 67);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormInfoAboutOne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 710);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cardsGridView);
             this.Controls.Add(this.entrancesDataGrid);
             this.Controls.Add(this.paymentsGridView);
@@ -335,5 +346,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CardId;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Count;
+        private System.Windows.Forms.Button button1;
     }
 }

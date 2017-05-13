@@ -39,5 +39,11 @@ namespace CarCheckpoint.Controllers
             Users.AddCardToUser(allData.User, allData.Card.CardId);
             return Ok();
         }
+
+        public IHttpActionResult AddEntrance([FromBody]string card)
+        {
+            UserEntrances.Add(card);
+            return Ok();
+        }
     }
 }

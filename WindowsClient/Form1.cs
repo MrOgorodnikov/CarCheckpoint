@@ -23,6 +23,9 @@ namespace WindowsClient
 
             foreach (var admSetting in Server.GetAdminSettings())
                 adminSettings.Add(admSetting.Name, admSetting.Value);
+
+            serialPort1.PortName = adminSettings.FirstOrDefault(a => a.Key == AdminSettingsNames.USBPort).Value;
+            serialPort1.Open();
         }
 
         private void cardIdTextBox_TextChanged(object sender, EventArgs e)
@@ -35,7 +38,7 @@ namespace WindowsClient
 
                 if (cardId == password || adminSettings.Values.Contains(cardId))
                 {
-                    ReactionOnCard.Admin();                    
+                    ReactionOnCard.Admin();
                     return;
                 }
 
@@ -49,22 +52,20 @@ namespace WindowsClient
                     KnownUser(user);
                     if (user.User.Balance >= 0)
                     {
-
-                        //cardIdTextBox.Text =  Server.AddUser(
-                        //    new User
-                        //    {
-                        //        Name = "rrr",
-                        //        Surname = "RRR",
-                        //        Balance = 55,
-                        //        GarageNumber = 26,
-                        //        Birthday = DateTime.Now
-                        //    },
-                        //    "0000000001"
-                        //);
+                        new Action(SendCommandToArduino).BeginInvoke(null, null);
+                        Server.AddEntrance(cardId);
                     }
                 }
-                
             }
+        }
+
+
+        private void SendCommandToArduino()
+        {            
+
+            if (serialPort1.IsOpen)
+                serialPort1.Write("5");
+            
         }
 
         private void KnownUser(AllUserData user)

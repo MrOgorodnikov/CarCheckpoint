@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cardIdTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,8 +40,8 @@
             this.garageLabel = new System.Windows.Forms.Label();
             this.phoneLabel = new System.Windows.Forms.Label();
             this.ballanceLabel = new System.Windows.Forms.Label();
-            this.rebootButton = new System.Windows.Forms.Button();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.SuspendLayout();
             // 
             // cardIdTextBox
@@ -136,15 +137,6 @@
             this.ballanceLabel.Size = new System.Drawing.Size(0, 17);
             this.ballanceLabel.TabIndex = 10;
             // 
-            // rebootButton
-            // 
-            this.rebootButton.Location = new System.Drawing.Point(416, 33);
-            this.rebootButton.Name = "rebootButton";
-            this.rebootButton.Size = new System.Drawing.Size(243, 181);
-            this.rebootButton.TabIndex = 11;
-            this.rebootButton.Text = "Перезагрузка";
-            this.rebootButton.UseVisualStyleBackColor = true;
-            // 
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
@@ -159,7 +151,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 561);
             this.Controls.Add(this.errorLabel);
-            this.Controls.Add(this.rebootButton);
             this.Controls.Add(this.ballanceLabel);
             this.Controls.Add(this.phoneLabel);
             this.Controls.Add(this.garageLabel);
@@ -191,8 +182,8 @@
         private System.Windows.Forms.Label garageLabel;
         private System.Windows.Forms.Label phoneLabel;
         private System.Windows.Forms.Label ballanceLabel;
-        private System.Windows.Forms.Button rebootButton;
         private System.Windows.Forms.Label errorLabel;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }
 

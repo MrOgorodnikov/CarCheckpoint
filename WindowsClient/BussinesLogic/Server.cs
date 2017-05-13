@@ -63,7 +63,17 @@ namespace WindowsClient.BussinesLogic
             }
         }
 
-         
+        public static List<WriteOff> GetAllWriteOff()
+        {
+            using (var client = new HttpClient())
+            {
+                var response = client.GetAsync($"{APP_PATH}/admin/GetWriteOffs/").Result;
+                var result = response.Content.ReadAsStringAsync().Result;
+                return JsonConvert.DeserializeObject<List<WriteOff>>(result);
+            }
+        }
+
+
 
 
         public static string AddUser(User user, string cardId)
@@ -121,6 +131,15 @@ namespace WindowsClient.BussinesLogic
             using (var client = new HttpClient())
             {
                 var response = client.PostAsJsonAsync($"{APP_PATH}/admin/Pay", payment).Result;
+                return response.StatusCode.ToString();
+            }
+        }
+
+        public static string AddEntrance(string card)
+        {
+            using (var client = new HttpClient())
+            {
+                var response = client.PostAsJsonAsync($"{APP_PATH}/users/AddEntrance", card).Result;
                 return response.StatusCode.ToString();
             }
         }
