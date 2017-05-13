@@ -38,11 +38,24 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.surnameTextBox = new System.Windows.Forms.TextBox();
+            this.adressTextBox = new System.Windows.Forms.TextBox();
+            this.balanceTextBox = new System.Windows.Forms.TextBox();
+            this.carTextBox = new System.Windows.Forms.TextBox();
+            this.birthdayTextBox = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.paymentsGridView = new System.Windows.Forms.DataGridView();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entrancesDataGrid = new System.Windows.Forms.DataGridView();
+            this.cardsGridView = new System.Windows.Forms.DataGridView();
+            this.CardId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entrancesDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardsGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,6 +74,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 24);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -132,51 +146,147 @@
             this.nameTextBox.Size = new System.Drawing.Size(164, 22);
             this.nameTextBox.TabIndex = 9;
             // 
-            // textBox2
+            // surnameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(205, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 22);
-            this.textBox2.TabIndex = 10;
+            this.surnameTextBox.Location = new System.Drawing.Point(205, 127);
+            this.surnameTextBox.Name = "surnameTextBox";
+            this.surnameTextBox.Size = new System.Drawing.Size(164, 22);
+            this.surnameTextBox.TabIndex = 10;
             // 
-            // textBox3
+            // adressTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(205, 191);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 22);
-            this.textBox3.TabIndex = 11;
+            this.adressTextBox.Location = new System.Drawing.Point(205, 191);
+            this.adressTextBox.Name = "adressTextBox";
+            this.adressTextBox.Size = new System.Drawing.Size(164, 22);
+            this.adressTextBox.TabIndex = 11;
             // 
-            // textBox4
+            // balanceTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(205, 233);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(164, 22);
-            this.textBox4.TabIndex = 12;
+            this.balanceTextBox.Location = new System.Drawing.Point(205, 233);
+            this.balanceTextBox.Name = "balanceTextBox";
+            this.balanceTextBox.Size = new System.Drawing.Size(164, 22);
+            this.balanceTextBox.TabIndex = 12;
             // 
-            // textBox5
+            // carTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(205, 269);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(164, 22);
-            this.textBox5.TabIndex = 13;
+            this.carTextBox.Location = new System.Drawing.Point(205, 269);
+            this.carTextBox.Name = "carTextBox";
+            this.carTextBox.Size = new System.Drawing.Size(164, 22);
+            this.carTextBox.TabIndex = 13;
             // 
-            // textBox6
+            // birthdayTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(205, 314);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(164, 22);
-            this.textBox6.TabIndex = 14;
+            this.birthdayTextBox.Location = new System.Drawing.Point(205, 314);
+            this.birthdayTextBox.Name = "birthdayTextBox";
+            this.birthdayTextBox.Size = new System.Drawing.Size(164, 22);
+            this.birthdayTextBox.TabIndex = 14;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(435, 84);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 15;
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.Location = new System.Drawing.Point(205, 157);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(164, 22);
+            this.phoneTextBox.TabIndex = 16;
+            // 
+            // paymentsGridView
+            // 
+            this.paymentsGridView.AllowUserToAddRows = false;
+            this.paymentsGridView.AllowUserToDeleteRows = false;
+            this.paymentsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.paymentsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.Payment});
+            this.paymentsGridView.Location = new System.Drawing.Point(8, 448);
+            this.paymentsGridView.Name = "paymentsGridView";
+            this.paymentsGridView.ReadOnly = true;
+            this.paymentsGridView.RowHeadersVisible = false;
+            this.paymentsGridView.RowTemplate.Height = 24;
+            this.paymentsGridView.Size = new System.Drawing.Size(240, 150);
+            this.paymentsGridView.TabIndex = 17;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Payment
+            // 
+            this.Payment.HeaderText = "Payment";
+            this.Payment.Name = "Payment";
+            this.Payment.ReadOnly = true;
+            // 
+            // entrancesDataGrid
+            // 
+            this.entrancesDataGrid.AllowUserToAddRows = false;
+            this.entrancesDataGrid.AllowUserToDeleteRows = false;
+            this.entrancesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.entrancesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DateCol,
+            this.Count});
+            this.entrancesDataGrid.Location = new System.Drawing.Point(268, 448);
+            this.entrancesDataGrid.Name = "entrancesDataGrid";
+            this.entrancesDataGrid.ReadOnly = true;
+            this.entrancesDataGrid.RowHeadersVisible = false;
+            this.entrancesDataGrid.RowTemplate.Height = 24;
+            this.entrancesDataGrid.Size = new System.Drawing.Size(240, 150);
+            this.entrancesDataGrid.TabIndex = 18;
+            // 
+            // cardsGridView
+            // 
+            this.cardsGridView.AllowUserToAddRows = false;
+            this.cardsGridView.AllowUserToDeleteRows = false;
+            this.cardsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cardsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CardId});
+            this.cardsGridView.Location = new System.Drawing.Point(531, 448);
+            this.cardsGridView.Name = "cardsGridView";
+            this.cardsGridView.ReadOnly = true;
+            this.cardsGridView.RowHeadersVisible = false;
+            this.cardsGridView.RowTemplate.Height = 24;
+            this.cardsGridView.Size = new System.Drawing.Size(240, 150);
+            this.cardsGridView.TabIndex = 19;
+            // 
+            // CardId
+            // 
+            this.CardId.HeaderText = "Card Number";
+            this.CardId.Name = "CardId";
+            this.CardId.ReadOnly = true;
+            this.CardId.Width = 200;
+            // 
+            // DateCol
+            // 
+            this.DateCol.HeaderText = "Date";
+            this.DateCol.Name = "DateCol";
+            this.DateCol.ReadOnly = true;
+            // 
+            // Count
+            // 
+            this.Count.HeaderText = "Count";
+            this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
             // 
             // FormInfoAboutOne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 493);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(783, 710);
+            this.Controls.Add(this.cardsGridView);
+            this.Controls.Add(this.entrancesDataGrid);
+            this.Controls.Add(this.paymentsGridView);
+            this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.birthdayTextBox);
+            this.Controls.Add(this.carTextBox);
+            this.Controls.Add(this.balanceTextBox);
+            this.Controls.Add(this.adressTextBox);
+            this.Controls.Add(this.surnameTextBox);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -189,6 +299,10 @@
             this.Controls.Add(this.label1);
             this.Name = "FormInfoAboutOne";
             this.Text = "FormInfoAboutOne";
+            this.Load += new System.EventHandler(this.FormInfoAboutOne_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.paymentsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entrancesDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardsGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,10 +320,20 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox surnameTextBox;
+        private System.Windows.Forms.TextBox adressTextBox;
+        private System.Windows.Forms.TextBox balanceTextBox;
+        private System.Windows.Forms.TextBox carTextBox;
+        private System.Windows.Forms.TextBox birthdayTextBox;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.DataGridView paymentsGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
+        private System.Windows.Forms.DataGridView entrancesDataGrid;
+        private System.Windows.Forms.DataGridView cardsGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CardId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
     }
 }
