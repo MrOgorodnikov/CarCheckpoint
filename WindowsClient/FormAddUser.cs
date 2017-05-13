@@ -38,5 +38,10 @@ namespace WindowsClient
                 resutl = "Sucssess!";
             MessageBox.Show(resutl, resutl, MessageBoxButtons.OK);
         }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            birthdayTextBox.Text = e.Start.Date.ToShortDateString();
+        }
     }
 }
