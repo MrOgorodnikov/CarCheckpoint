@@ -69,6 +69,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(205, 34);
             this.comboBox1.Name = "comboBox1";
@@ -141,6 +142,7 @@
             // 
             // nameTextBox
             // 
+            this.nameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.nameTextBox.Location = new System.Drawing.Point(205, 88);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(164, 22);
@@ -148,6 +150,7 @@
             // 
             // surnameTextBox
             // 
+            this.surnameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.surnameTextBox.Location = new System.Drawing.Point(205, 127);
             this.surnameTextBox.Name = "surnameTextBox";
             this.surnameTextBox.Size = new System.Drawing.Size(164, 22);
@@ -155,6 +158,7 @@
             // 
             // adressTextBox
             // 
+            this.adressTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.adressTextBox.Location = new System.Drawing.Point(205, 191);
             this.adressTextBox.Name = "adressTextBox";
             this.adressTextBox.Size = new System.Drawing.Size(164, 22);
@@ -162,6 +166,7 @@
             // 
             // balanceTextBox
             // 
+            this.balanceTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.balanceTextBox.Location = new System.Drawing.Point(205, 233);
             this.balanceTextBox.Name = "balanceTextBox";
             this.balanceTextBox.Size = new System.Drawing.Size(164, 22);
@@ -169,6 +174,7 @@
             // 
             // carTextBox
             // 
+            this.carTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.carTextBox.Location = new System.Drawing.Point(205, 269);
             this.carTextBox.Name = "carTextBox";
             this.carTextBox.Size = new System.Drawing.Size(164, 22);
@@ -176,6 +182,7 @@
             // 
             // birthdayTextBox
             // 
+            this.birthdayTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.birthdayTextBox.Location = new System.Drawing.Point(205, 314);
             this.birthdayTextBox.Name = "birthdayTextBox";
             this.birthdayTextBox.Size = new System.Drawing.Size(164, 22);
@@ -183,12 +190,16 @@
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.monthCalendar1.Location = new System.Drawing.Point(435, 84);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 15;
+            this.monthCalendar1.TitleForeColor = System.Drawing.SystemColors.InfoText;
+            this.monthCalendar1.TrailingForeColor = System.Drawing.SystemColors.ButtonShadow;
             // 
             // phoneTextBox
             // 
+            this.phoneTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.phoneTextBox.Location = new System.Drawing.Point(205, 157);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(164, 22);
@@ -276,6 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(783, 710);
             this.Controls.Add(this.cardsGridView);
             this.Controls.Add(this.entrancesDataGrid);
@@ -298,6 +310,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "FormInfoAboutOne";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormInfoAboutOne";
             this.Load += new System.EventHandler(this.FormInfoAboutOne_Load);
             ((System.ComponentModel.ISupportInitialize)(this.paymentsGridView)).EndInit();

@@ -21,7 +21,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <!-- <li>@Html.ActionLink("Home", "Index", "Home")</li> -->
                     <!-- WebController links -->
                     <li>@Html.ActionLink("All users", "GetAllUsers", "HTMLgetter")</li>
                     <li>@Html.ActionLink("Find", "Find", "HTMLgetter")</li>
@@ -32,6 +32,9 @@
             </div>
         </div>
     </div>
+
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />

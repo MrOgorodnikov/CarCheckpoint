@@ -25,7 +25,7 @@ namespace WindowsClient
                 adminSettings.Add(admSetting.Name, admSetting.Value);
 
             serialPort1.PortName = adminSettings.FirstOrDefault(a => a.Key == AdminSettingsNames.USBPort).Value;
-            serialPort1.Open();
+            //serialPort1.Open();
         }
 
         private void cardIdTextBox_TextChanged(object sender, EventArgs e)
@@ -55,6 +55,7 @@ namespace WindowsClient
                         new Action(SendCommandToArduino).BeginInvoke(null, null);
                         Server.AddEntrance(cardId);
                     }
+                    else errorLabel.Text = "No money";
                 }
             }
         }

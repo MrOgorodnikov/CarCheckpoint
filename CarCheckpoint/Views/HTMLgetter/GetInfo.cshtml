@@ -7,32 +7,134 @@
 
 <html>
 <head>
+
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>Search result</title>
+
+    <style>
+        table {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            border-collapse: collapse;
+            color: #686461;
+            width: 90%;
+        }
+
+        caption {
+            padding: 10px;
+            color: white;
+            background: rgb(74, 179, 198);
+            font-size: 28px;
+            text-align: center;
+            font-weight: bolder;
+            border-radius: 5px;
+            box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+        }
+
+        th {
+            border-bottom: 3px solid #B9B29F;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+        }
+    </style>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
 </head>
+
 <body>
-    <div>
-        <p>@Model.Name</p>
-        <p>@Model.Surname</p>
-        <p>@Model.Phone</p>
-        <p>@Model.HomeAdress</p>
-        <p>@Model.GarageNumber</p>
-        <p>@Model.Birthday</p>
-        <p>@Model.Balance</p>
-        <p>@Model.CarNumber</p>
-        @foreach (var payment in Model.Payments)
-        {
-            <p>@payment.DateTime</p>
-            <p>@payment.Sum</p>
-        }
-        @foreach (var card in Model.Cards)
-        {
-            <p>@card.CardId</p>            
-        }
-        @foreach (var entrance in Model.Entrances)
-        {
-            <p>@entrance.EntranceDate</p>            
-        }
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("CAR CHECKPOINT", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!-- <li>@Html.ActionLink("Home", "Index", "Home")</li> -->
+                    <!-- WebController links -->
+                    <li>@Html.ActionLink("All users", "GetAllUsers", "HTMLgetter")</li>
+                    <li>@Html.ActionLink("Find", "Find", "HTMLgetter")</li>
+                    <li>@Html.ActionLink("Log in", "LogIn", "HTMLgetter")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "HTMLgetter")</li>
+                    <!-- <li>@Html.ActionLink("Help", "Index", "Help", new { area = "" })</li> -->
+                </ul>
+            </div>
+        </div>
     </div>
+
+    <table align="center">
+        <caption>Detailed info of user</caption>
+        <tr><th>Name:</th><th>@Model.Name</th></tr>
+        <tr><th>Surname:</th><th>@Model.Surname</th></tr>
+        <tr><th>Phone number:</th><th>@Model.Phone</th></tr>
+        <tr><th>Home adress:</th><th>@Model.HomeAdress</th></tr>
+        <tr><th>Garage number:</th><th>@Model.GarageNumber</th></tr>
+        <tr><th>Birthday:</th><th>@Model.Birthday</th></tr>
+        <tr><th>Balance:</th><th>@Model.Balance</th></tr>
+        <tr><th>Car number:</th><th>@Model.CarNumber</th></tr>
+        <tr>
+            <th>Payments:</th>
+            <th>
+                <details>
+                    <summary>expand</summary>
+                    @foreach (var payment in Model.Payments)
+                    {
+                        <p>@payment.DateTime => @payment.Sum</p>
+                    }
+                </details>
+            </th>
+        </tr>
+        <tr>
+            <th>Cards:</th>
+            <th>
+                <details>
+                    <summary>expand</summary>
+                    @foreach (var card in Model.Cards)
+                    {
+                        <p>@card.CardId</p>
+                    }
+                </details>
+            </th>
+        </tr>
+        <tr>
+            <th>Entrances:</th>
+            <th>
+                <details>
+                    <summary>expand</summary>
+                    @foreach (var entrance in Model.Entrances)
+                    {
+                        <p>@entrance.EntranceDate</p>
+                    }
+                </details>
+            </th>
+        </tr>
+    </table>
+
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year – Vladyslav Ogorodnikov and Mykhailo Tsion</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    
+    <script>
+        var table = document.body.getElementsByTagName("table")[0];
+        for (var i = 0; table.rows.length; i++) {
+            table.rows[i].style.background = (i % 2) ? "#FFFFFF" : "#E8E6D1";
+        }
+    </script>
+
 </body>
 </html>

@@ -46,9 +46,11 @@
             // 
             // cardIdTextBox
             // 
+            this.cardIdTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cardIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cardIdTextBox.Location = new System.Drawing.Point(126, 381);
             this.cardIdTextBox.Name = "cardIdTextBox";
-            this.cardIdTextBox.Size = new System.Drawing.Size(189, 22);
+            this.cardIdTextBox.Size = new System.Drawing.Size(189, 15);
             this.cardIdTextBox.TabIndex = 0;
             this.cardIdTextBox.TextChanged += new System.EventHandler(this.cardIdTextBox_TextChanged);
             // 
@@ -140,15 +142,18 @@
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
+            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
             this.errorLabel.Location = new System.Drawing.Point(125, 306);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(0, 17);
+            this.errorLabel.Size = new System.Drawing.Size(0, 52);
             this.errorLabel.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1011, 561);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.ballanceLabel);

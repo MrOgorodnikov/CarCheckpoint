@@ -42,12 +42,12 @@
             this.writeOffGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
             this.Payment});
-            this.writeOffGridView.Location = new System.Drawing.Point(105, 103);
+            this.writeOffGridView.Location = new System.Drawing.Point(12, 12);
             this.writeOffGridView.Name = "writeOffGridView";
             this.writeOffGridView.ReadOnly = true;
             this.writeOffGridView.RowHeadersVisible = false;
             this.writeOffGridView.RowTemplate.Height = 24;
-            this.writeOffGridView.Size = new System.Drawing.Size(276, 150);
+            this.writeOffGridView.Size = new System.Drawing.Size(326, 150);
             this.writeOffGridView.TabIndex = 0;
             // 
             // Date
@@ -66,9 +66,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 594);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(355, 322);
             this.Controls.Add(this.writeOffGridView);
             this.Name = "FormWriteOFFs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormWriteOFFs";
             this.Load += new System.EventHandler(this.FormWriteOFFs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.writeOffGridView)).EndInit();

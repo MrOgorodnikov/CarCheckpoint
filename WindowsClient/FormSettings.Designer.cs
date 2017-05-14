@@ -79,6 +79,7 @@
             // 
             // card1TextBox
             // 
+            this.card1TextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.card1TextBox.Location = new System.Drawing.Point(139, 35);
             this.card1TextBox.Name = "card1TextBox";
             this.card1TextBox.Size = new System.Drawing.Size(153, 22);
@@ -86,6 +87,7 @@
             // 
             // card2TextBox
             // 
+            this.card2TextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.card2TextBox.Location = new System.Drawing.Point(139, 72);
             this.card2TextBox.Name = "card2TextBox";
             this.card2TextBox.Size = new System.Drawing.Size(153, 22);
@@ -93,6 +95,7 @@
             // 
             // card3TextBox
             // 
+            this.card3TextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.card3TextBox.Location = new System.Drawing.Point(139, 109);
             this.card3TextBox.Name = "card3TextBox";
             this.card3TextBox.Size = new System.Drawing.Size(153, 22);
@@ -100,6 +103,7 @@
             // 
             // card4TextBox
             // 
+            this.card4TextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.card4TextBox.Location = new System.Drawing.Point(139, 144);
             this.card4TextBox.Name = "card4TextBox";
             this.card4TextBox.Size = new System.Drawing.Size(153, 22);
@@ -107,6 +111,7 @@
             // 
             // USBPortTextBox
             // 
+            this.USBPortTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.USBPortTextBox.Location = new System.Drawing.Point(139, 188);
             this.USBPortTextBox.Name = "USBPortTextBox";
             this.USBPortTextBox.Size = new System.Drawing.Size(153, 22);
@@ -123,19 +128,21 @@
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.saveButton.Location = new System.Drawing.Point(48, 238);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(244, 64);
             this.saveButton.TabIndex = 10;
             this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 499);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(344, 331);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.USBPortTextBox);
@@ -148,6 +155,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormSettings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSettings";
             this.Load += new System.EventHandler(this.FormSettings_Load);
             this.ResumeLayout(false);

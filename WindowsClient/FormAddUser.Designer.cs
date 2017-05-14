@@ -88,6 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Location = new System.Drawing.Point(46, 295);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 17);
@@ -97,6 +98,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label6.Location = new System.Drawing.Point(46, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 17);
@@ -123,6 +125,7 @@
             // 
             // nameTextBox
             // 
+            this.nameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.nameTextBox.Location = new System.Drawing.Point(155, 50);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(141, 22);
@@ -130,6 +133,7 @@
             // 
             // surnameTextBox
             // 
+            this.surnameTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.surnameTextBox.Location = new System.Drawing.Point(155, 87);
             this.surnameTextBox.Name = "surnameTextBox";
             this.surnameTextBox.Size = new System.Drawing.Size(141, 22);
@@ -137,6 +141,7 @@
             // 
             // phoneTextBox
             // 
+            this.phoneTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.phoneTextBox.Location = new System.Drawing.Point(155, 154);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(141, 22);
@@ -144,6 +149,7 @@
             // 
             // carTextBox
             // 
+            this.carTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.carTextBox.Location = new System.Drawing.Point(155, 191);
             this.carTextBox.Name = "carTextBox";
             this.carTextBox.Size = new System.Drawing.Size(141, 22);
@@ -151,6 +157,7 @@
             // 
             // birthdayTextBox
             // 
+            this.birthdayTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.birthdayTextBox.Location = new System.Drawing.Point(155, 225);
             this.birthdayTextBox.Name = "birthdayTextBox";
             this.birthdayTextBox.Size = new System.Drawing.Size(141, 22);
@@ -158,6 +165,7 @@
             // 
             // homeTextBox
             // 
+            this.homeTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.homeTextBox.Location = new System.Drawing.Point(155, 263);
             this.homeTextBox.Name = "homeTextBox";
             this.homeTextBox.Size = new System.Drawing.Size(141, 22);
@@ -165,6 +173,7 @@
             // 
             // cardTextBox
             // 
+            this.cardTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.cardTextBox.Location = new System.Drawing.Point(155, 295);
             this.cardTextBox.Name = "cardTextBox";
             this.cardTextBox.Size = new System.Drawing.Size(141, 22);
@@ -172,6 +181,7 @@
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.monthCalendar1.Location = new System.Drawing.Point(329, 50);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 16;
@@ -179,16 +189,18 @@
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.saveButton.Location = new System.Drawing.Point(329, 269);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(192, 48);
             this.saveButton.TabIndex = 17;
             this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // garageTextBox
             // 
+            this.garageTextBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.garageTextBox.Location = new System.Drawing.Point(155, 122);
             this.garageTextBox.Name = "garageTextBox";
             this.garageTextBox.Size = new System.Drawing.Size(141, 22);
@@ -198,6 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(573, 369);
             this.Controls.Add(this.garageTextBox);
             this.Controls.Add(this.saveButton);
@@ -219,6 +232,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormAddUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddUser";
             ((System.ComponentModel.ISupportInitialize)(this.garageTextBox)).EndInit();
             this.ResumeLayout(false);
