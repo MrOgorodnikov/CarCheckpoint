@@ -1,0 +1,71 @@
+﻿@model IEnumerable<CarCheckpoint.Models.User>
+
+<table align="center">
+    <caption>
+        All users info
+    </caption>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Balance</th>
+        <th>Garage number</th>
+        <th>Car number</th>
+    </tr>
+    @{int i = 1; }
+
+        @foreach (var user in Model)
+        {
+            <tr>
+                <th>@i</th>
+                <th>@user.Name</th>
+                <th>@user.Surname</th>
+                <th>@user.Balance</th>
+                <th>@user.GarageNumber</th>
+                <th>@user.CarNumber</th>
+             </tr>
+            i++;
+        }
+    
+</table>
+
+
+
+<style>
+
+    table {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        border-collapse: collapse;
+        color: #686461;
+        width: 85%;
+    }
+
+    caption {
+        padding: 10px;
+        color: white;
+        background: rgb(74, 179, 198);
+        font-size: 28px;
+        text-align: center;
+        font-weight: bolder;
+        border-radius: 5px;
+        box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+    }
+
+    th {
+        border-bottom: 3px solid #B9B29F;
+        padding: 10px;
+        text-align: left;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+</style>
+
+<script>
+    var table = document.body.getElementsByTagName("table")[0];
+    for (var i = 1; table.rows.length; i++) {
+        table.rows[i].style.background = (i % 2) ? "#FFFFFF" : "#E8E6D1";
+    }
+</script>

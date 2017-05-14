@@ -1,0 +1,38 @@
+﻿@model CarCheckpoint.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <p>@Model.Name</p>
+        <p>@Model.Surname</p>
+        <p>@Model.Phone</p>
+        <p>@Model.HomeAdress</p>
+        <p>@Model.GarageNumber</p>
+        <p>@Model.Birthday</p>
+        <p>@Model.Balance</p>
+        <p>@Model.CarNumber</p>
+        @foreach (var payment in Model.Payments)
+        {
+            <p>@payment.DateTime</p>
+            <p>@payment.Sum</p>
+        }
+        @foreach (var card in Model.Cards)
+        {
+            <p>@card.CardId</p>            
+        }
+        @foreach (var entrance in Model.Entrances)
+        {
+            <p>@entrance.EntranceDate</p>            
+        }
+    </div>
+</body>
+</html>

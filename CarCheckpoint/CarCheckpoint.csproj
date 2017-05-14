@@ -188,6 +188,8 @@
     <Compile Include="BussinesLogic\UserEntrances.cs" />
     <Compile Include="BussinesLogic\Users.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HTMLgetterController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -255,6 +257,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\HTMLgetter\Contact.cshtml" />
+    <Content Include="Views\HTMLgetter\Find.cshtml" />
+    <Content Include="Views\HTMLgetter\GetAllUsers.cshtml" />
+    <Content Include="Views\HTMLgetter\LogIn.cshtml" />
+    <Content Include="Views\HTMLgetter\GetInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

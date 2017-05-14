@@ -1,0 +1,94 @@
+﻿<style>
+    #subscribe, #login {
+        position: center;
+        top: 0px;
+        width: 80%;
+        padding: 18px 6% 60px 6%;
+        margin: 0 0 35px 0;
+        background-color: #eeeeee;
+        box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+        border-radius: 5px;
+        padding-bottom: inherit;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+     
+    label {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: larger;
+    }
+
+    #login {
+        z-index: 22;
+    }
+
+    #wrapper p.button input {
+        width: 30%;
+        cursor: pointer;
+        background: rgb(61, 157, 179);
+        padding: 8px 5px;
+        font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+        color: #fff;
+        font-size: 24px;
+        border: 1px solid rgb(28, 108, 122);
+        margin-bottom: 10px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+        box-shadow: 
+            0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 
+            0px 0px 0px 3px rgb(254, 254, 254), 
+            0px 5px 3px 3px rgb(210, 210, 210);
+        transition: all 0.2s linear;
+    }
+
+    #wrapper p.button input:hover {
+        background: rgb(74, 179, 198);
+    }
+
+    #wrapper p.button input:active,
+    #wrapper p.button input:focus {
+            background: rgb(40, 137, 154);
+            position: relative;
+            top: 1px;
+            border: 1px solid rgb(12, 76, 87);
+            box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+    }
+    p.login.button {
+        text-align: center;
+        margin: 5px 0;
+    }
+    #register {
+        z-index: 21;
+        opacity: 0;
+    }
+</style>
+
+<br/><br/>
+<div id="container_demo" align="center">
+    <div id="wrapper">
+        <div id="login" class="animate form">
+            <!-- https://metanit.com/sharp/aspnet5/5.2.php --->
+            <form method="post" action="~/HTMLgetter/Read" autocomplete="on">
+                <h1>Log in</h1>
+                <p>
+                    <label for="username" class="uname" data-icon="u"> Username </label>
+                    <input id="username" name="username" required="required" type="text" placeholder="nagibator2008@mail.com" />
+                </p>
+                <p>
+                    <label for="password" class="youpasswd" data-icon="p"> Password </label>
+                    <input id="password" name="password" required="required" type="password" placeholder="qwerty" />
+                </p>
+                <p class="keeplogin">
+                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+                    <label for="loginkeeping">Keep me logged in</label>
+                </p>
+                <p class="login button">
+                    <input type="submit" value="Login" />
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
