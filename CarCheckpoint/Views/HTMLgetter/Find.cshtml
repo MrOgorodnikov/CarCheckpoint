@@ -114,7 +114,7 @@
         <div id="login" class="animate form">
             <!-- https://metanit.com/sharp/aspnet5/5.2.php --->
             <form method="post" action="/HTMLgetter/GetInfo/" autocomplete="on">
-                <h3>enter the number of the card:</h3>
+                <h3>enter the number of garage:</h3>
                 <p>
                     <input 
                            id="cardnumber" 
@@ -135,42 +135,3 @@
 </div>
 
 <br/>
-
-
-
-
-<table class="info jumbotron" align = "center">
-    <tr><th>User&#8217s finding status: </th><th>unknown</th></tr>
-</table>
-
-<script>
-
-    "use strict";
-
-    $(function () {
-        $(".find button").click(function () {
-            $.getJSON("/HTMLgetter/GetInfo", document.body.getElementsByClassName("input")[0].nodeValue, cardnumber);
-        });
-    });
-
-    function resetState() {
-        //document.body.getElementsByTagName("table")[1].rows[0] =
-        //  "<tr><th>User&#8217s finding status: </th><th>unknown</th></tr>";
-        $(".info").rows[0] = "<tr><th>User&#8217s finding status: </th><th>unknown</th></tr>";
-    }
-
-    function okState() {
-        //document.body.getElementsByTagName("table")[1].rows[0] =
-        //  "<tr><th>User&#8217s finding status: </th><th>found!</th></tr>";
-        $(".info").rows[0] = "<tr><th>User&#8217s finding status: </th><th>found!</th></tr>";
-        $(".info").rows[0].cells[1].style.color = "green";
-    }
-
-    function unknownState() {
-        //document.body.getElementsByTagName("table")[1].rows[0] =
-         // "<tr><th>User&#8217s finding status: </th><th>no users</th></tr>";
-        $(".info").rows[0] = "<tr><th>User&#8217s finding status: </th><th>no users</th></tr>";
-        $(".info").rows[0].cells[1].style.color = "red";
-    }
-
-</script>
